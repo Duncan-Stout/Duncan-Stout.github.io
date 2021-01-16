@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add_question</title>
+</head>
+<body>
+    <h1>Add your own poll</h1>
+    <form action="{% url polls:add_question %}" method="post">
+        {% csrf_token %}
+        <input type="text" name='question' placeholder="Question">
+        <input type="text" name='choice1' placeholder="choice 1">
+        <input type="text" name='choice2' placeholder="choice 2">
+        <input type="text" name='choice3' placeholder="choice 3">
+        <input type="text" name='choice4' placeholder="choice 4">
+        <input type="submit" name='submit' value="sumbit question">
+
+
+
+    </form>
+</body>
+</html>

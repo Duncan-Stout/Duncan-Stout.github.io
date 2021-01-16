@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snaptalk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body>
+    <aside class="menu">
+        <p class="menu-label">
+          General
+        </p>
+        <ul class="menu-list">
+          <li><a>Signup</a></li>
+          <li><a>Login</a></li>
+        </ul>
+        <p class="menu-label">
+          Convos
+        </p>
+        <ul class="menu-list">
+          <li><a>Friends</a></li>
+          <li>
+            <a class="is-active">Talks</a>
+            <ul>
+              <li><a>Convo Suggestions</a></li>
+              <li><a>Active convos</a></li>
+              <li><a>Convo Archive</a></li>
+            </ul>
+          </li>
+          <li><a>Invitations</a></li>
+          <li><a>Convo invites</a></li>
+          <li><a>Asscociate invites</a></li>
+        </ul>
+        
+      </aside>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
