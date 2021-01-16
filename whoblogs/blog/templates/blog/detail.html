@@ -1,0 +1,61 @@
+{% extends 'users/base.html' %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col  m8 offset-m2">
+        <div class="card">
+            <div class="card-image">
+                {% if hoot.image %}
+                <img src="{{hoot.image}}">
+                {% endif %}
+            </div>
+            <div class="card-content">
+            <span class="card-title">{{ hoot.title }}</span>
+            <p>{{ hoot.body }}</p>
+        </div>
+    <div class="card-action">
+        <a href="{% url 'blog:like'%}?opinion=like&interest=hoot&id={{hoot.id}}">likes: {{ hoot.likes }}</a>
+        <a href="{% url 'blog:like'%}?opinion=dislike&interest=hoot&id={{hoot.id}}">dislikes: {{ hoot.dislikes }}</a>
+    </div>
+</div>
+</div>
+</div>
+<!-- comment form -->
+<div class="row">
+    <div class="card deep-purple lighten-2 col m6 offset-m3" >
+        <form action="{% url 'blog:comment' hoot.id %}" method="POST">
+            {% csrf_token %}
+        <div class="card-content white-text">
+            <div class="input-field col s6">
+                <input name="comment_body" id="comment_body" type="text" class="validate">
+                <label for="comment_body">Comment</label>
+            </div>
+            <input type="submit" value="Leave Comment"> 
+        </div>
+        </div>
+        </form>
+      </div>
+    </div>
+
+ <!-- comments -->
+{% for comment in hoot.comment_set.all %}
+<div class="row">
+<div class="card deep-purple lighten-2 col m6 offset-m3" >
+    <div class="card-content white-text">
+      
+      <p>{{ comment.body }}</p>
+      <p>{{ comment.author }}</p>
+    </div>
+    <div class="card-action row">
+        <p class="col m4 green-text text-darken-2">{{ comment.posted_date}}</p>
+        <a href="{% url 'blog:like'%}?opinion=like&interest=comment&id={{comment.id}}" class="col m4 green-text text-darken-2">Likes: {{ comment.likes }}</a>
+        <a href="{% url 'blog:like'%}?opinion=dislike&interest=comment&id={{comment.id}}" class="col m4 green-text text-darken-2">Dislikes: {{ comment.dislikes }}</a>
+      
+      
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

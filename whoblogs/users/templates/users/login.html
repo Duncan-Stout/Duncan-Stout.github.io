@@ -1,0 +1,27 @@
+{% extends 'users/base.html' %}
+
+
+{% block content %}
+
+{% if error %}
+<h4>{{ error }}</h4>
+{% endif %}
+<div class="card-panel row">
+    <form action="{% url 'users:login' %}" method="post" class="col m6 offset-m3">
+      {% csrf_token %}
+      
+      <div class="input-field col s6">
+        <input name="username" id="username" type="text" class="validate">
+        <label for="username">Username</label>
+      </div>
+      
+      <div class="input-field col s6">
+        <input name="password" id="password" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+      
+      <input class="btn" type="submit" value="login">
+      <a href="{% url 'users:signup' %}" class="btn">Sign Up</a>
+    </form>
+  </div>
+{% endblock %}

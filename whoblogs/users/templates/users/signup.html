@@ -1,0 +1,42 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+    <h1>Signup</h1>
+    {% if error %}
+    <h4>{{ error }}</h4>
+    {% endif %}
+    <div class="card-panel row">
+        <form action="{% url 'users:signup' %}" method="post" class="col m6 offset-m3">
+          {% csrf_token %}
+          <div class="input-field col s6">
+            <input name="firstname" id="first_name" type="text" class="validate" required>
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="lastname" id="last_name" type="text" class="validate" required>
+            <label for="last_name">Last Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="username" id="username" type="text" class="validate" required>
+            <label for="username">Username</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="email" id="email" type="text" class="validate" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="password" id="password" type="password" class="validate" required>
+            <label for="password">Password</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="password2" id="password2" type="password" class="validate" required>
+            <label for="password2">Confirm Password</label>
+          </div>
+          <input class="btn" type="submit" value="sign up">
+          <a href="{% url 'users:login' %}" class="btn">Login</a>
+        </form>
+      </div>
+{% endblock %}
+
+
+

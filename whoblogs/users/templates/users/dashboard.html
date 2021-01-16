@@ -1,0 +1,22 @@
+{% extends 'users/base.html' %}
+
+
+{% block content %}
+<h1>Dashboard</h1>
+<h2>  {{ request.user }}      </h2>
+{% for hoot in hoots %}
+<div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <span class="card-title">{{ hoot.title }}</span>
+      <p>{{ hoot.body }}</p>
+      <p>{{ hoot.likes }}</p>
+      <p>{{ hoot.dislikes }}</p>
+    </div>
+    <div class="card-action">
+      <a href="{% url 'blog:detail' hoot.id %}">View Hoot</a>
+      <a href="{% url 'blog:delete' hoot.id %}">Delete</a>
+    </div>
+  </div>
+
+{% endfor %}
+{% endblock  %}
