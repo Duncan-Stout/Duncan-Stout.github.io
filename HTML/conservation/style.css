@@ -43,7 +43,7 @@ body {
     width: 400px;
     margin: 0 auto;
   }
-  
+  /* shows overflow scroll for when an element has overlap and you cant or dont want to use padding or margin to fix it */
   #main {
     margin: 0 auto;
     padding: 40px;
