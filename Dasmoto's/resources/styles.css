@@ -1,0 +1,68 @@
+* {
+    border: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+header {
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    background-image: url(./imgs/dasmotos_image1.webp);
+    width: 100%;
+    text-align: center;
+    margin: 67px auto;
+}
+
+#hbrushes {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: mediumspringgreen;
+    margin: 26px auto;
+}
+
+#h2hacksaw  {
+    margin: 18px auto;
+}
+
+#pbrushes {
+    margin: 16px auto;
+}
+
+#hframes {
+    margin: 26px auto;
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: lightcoral;
+}
+
+#h2artframes {
+    margin: 18px auto;
+}
+
+#pframes {
+    margin: 16px auto;
+}
+
+#hpaint {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: skyblue;
+    margin: 26px auto;
+}
+
+#h2cleanpaint {
+    margin: 18px auto;
+}
+
+#ppaint {
+    margin: 16px auto;
+}
