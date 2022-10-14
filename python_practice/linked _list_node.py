@@ -1,4 +1,4 @@
-# We'll be using our Node class
+# Node class
 class Node:
   def __init__(self, value, next_node=None):
     self.value = value
@@ -13,7 +13,7 @@ class Node:
   def set_next_node(self, next_node):
     self.next_node = next_node
 
-# Our LinkedList class
+#  LinkedList class
 class LinkedList:
   def __init__(self, value=None):
     self.head_node = Node(value)
@@ -21,7 +21,7 @@ class LinkedList:
   def get_head_node(self):
     return self.head_node
   
-# Add your insert_beginning and stringify_list methods below:
+#  insert_beginning and stringify_list methods below:
   def insert_beginning(self, new_value):
     new_node = Node(new_value)
     new_node.set_next_node(self.head_node)
@@ -51,7 +51,7 @@ class LinkedList:
                 current_node = next_node              
   
 
-# Test your code by uncommenting the statements below - did your list print to the terminal?
+# Test stringify_list method by uncommenting the code below:
 # ll = LinkedList(5)
 # ll.insert_beginning(70)
 # ll.insert_beginning(5675)
