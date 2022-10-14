@@ -1,0 +1,20 @@
+// Write your function here:
+const howOld = (age, year) => {
+    const currentYear = 2022;
+    let yearDiff = year - currentYear;
+    let newAge = age + yearDiff;
+    if (year > currentYear) {
+      return `You will be ${newAge} in the year ${year}`;
+    }else if (newAge < 0) {
+      return `The year ${year} was ${Math.abs(age - Math.abs(yearDiff))} years before you were born`;
+    }else {
+      return `You were ${newAge} in the year ${year}`;
+    }
+  };
+  console.log(howOld(39, 1980));
+  
+  
+  
+  
+  // Once your function is written, write function calls to test your code!
+  

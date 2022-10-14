@@ -1,0 +1,47 @@
+* {
+    border: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+   
+   
+  h1 {
+    color: green;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: purple;
+    font-size: 60px;
+  }
+  #header {
+      border-top: 80px;
+  }
+   
+  p, 
+  li {
+    font-size: 18px;
+    text-align: center;
+    padding: 80px 20px 0;
+    position: relative;
+    top: 80px;
+    
+  }
+
+   
+  a {
+    text-decoration: none;
+  }
+
+  body {
+      background-color: aqua;
+        
+    }
+
+  /* #favsite {
+    position: absolute;
+    bottom: 300px;
+    left: 30%;
+        
+    } */

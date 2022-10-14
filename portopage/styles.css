@@ -1,0 +1,34 @@
+ html, body {
+    
+    padding: 0;
+    margin: 0;
+ };
+
+ header {
+     position: relative;
+     width: 100%;
+     
+ }
+
+ body {
+     background-color: purple;
+ }
+
+ h1 {
+     position: relative;
+     margin-top: 300px;
+     text-align: center;
+     color: aqua;
+ }
+
+ button {
+     background-color: rgb(73, 233, 73);
+     color: rgb(77, 8, 141);
+     left: 44.5%;
+     right: 56.5%;
+     width: 10%;
+     font-size: x-large;
+     position: fixed;
+     font-family: 'Chakra Petch', sans-serif;
+     border-radius: 80%;
+ }
